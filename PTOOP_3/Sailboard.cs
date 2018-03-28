@@ -10,5 +10,12 @@ namespace PTOOP_3
     {
         public String boardСlass;
         public String sailType;
+
+        public Sailboard(String model, String color, int madeYear, String _boardClass, String _sailType)
+            : base(model, color, madeYear)
+        {
+            this.boardСlass = _boardClass;
+            this.sailType = _sailType;
+        }
     }
 }

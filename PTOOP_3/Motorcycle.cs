@@ -10,5 +10,12 @@ namespace PTOOP_3
     {
         String type;
         bool buggy;
+
+        public Motorcycle(String model, String color, int madeYear, String _type, bool _buggy)
+            : base(model, color, madeYear)
+        {
+            this.type = _type;
+            this.buggy = _buggy;
+        }
     }
 }

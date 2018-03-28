@@ -10,5 +10,12 @@ namespace PTOOP_3
     {
         public int carryingСapacity;
         public String design;
+
+        public Car(String model, String color, int madeYear, int _carryingСapacity, String _design)
+            : base(model, color, madeYear)
+        {
+            this.carryingСapacity = _carryingСapacity;
+            this.design = _design;
+        }
     }
 }

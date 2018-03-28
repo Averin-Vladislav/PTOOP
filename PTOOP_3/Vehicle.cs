@@ -11,5 +11,12 @@ namespace PTOOP_3
         public String model;
         public String color;
         public int madeYear;
+
+        public Vehicle(String _model, String _color, int _madeYear)
+        {
+            this.model = _model;
+            this.color = _color;
+            this.madeYear = _madeYear;
+        }
     }
 }

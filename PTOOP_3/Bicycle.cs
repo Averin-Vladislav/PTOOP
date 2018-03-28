@@ -10,5 +10,12 @@ namespace PTOOP_3
     {
         public int wheelCount;
         public bool isSport;
+
+        public Bicycle(String model, String color, int madeYear, int _wheelCount, bool _isSport)
+            : base(model, color, madeYear)
+        {
+            this.wheelCount = _wheelCount;
+            this.isSport = _isSport;
+        }
     }
 }

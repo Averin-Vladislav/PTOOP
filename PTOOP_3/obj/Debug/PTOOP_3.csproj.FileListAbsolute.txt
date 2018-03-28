@@ -1,3 +1,7 @@
 D:\PTOOP_3\PTOOP_3\bin\Debug\PTOOP_3.exe.config
-D:\PTOOP_3\PTOOP_3\obj\Debug\PTOOP_3.exe
-D:\PTOOP_3\PTOOP_3\obj\Debug\PTOOP_3.pdb
+D:\PTOOP_3\PTOOP_3\obj\Debug\PTOOP_3.csprojResolveAssemblyReference.cache
+D:\PTOOP_3\PTOOP_3\obj\Debug\PTOOP_3.Form1.resources
+D:\PTOOP_3\PTOOP_3\obj\Debug\PTOOP_3.Properties.Resources.resources
+D:\PTOOP_3\PTOOP_3\obj\Debug\PTOOP_3.csproj.GenerateResource.Cache
+D:\PTOOP_3\PTOOP_3\bin\Debug\PTOOP_3.exe
+D:\PTOOP_3\PTOOP_3\bin\Debug\PTOOP_3.pdb

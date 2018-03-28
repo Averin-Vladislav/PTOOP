@@ -10,5 +10,12 @@ namespace PTOOP_3
     {
         public int carriageCount;
         public String tractionType;
+
+        public Train(String model, String color, int madeYear, int _carriageCount, String _tractionType)
+            : base(model, color, madeYear)
+        {
+            this.carriageCount = _carriageCount;
+            this.tractionType = _tractionType;
+        }
     }
 }
