@@ -30,27 +30,32 @@
         {
             this.add_car = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.edit_car = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.design = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.carrying_capacity = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.edit_bicycle = new System.Windows.Forms.Button();
             this.sport = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.wheel_count = new System.Windows.Forms.TextBox();
             this.add_bicycle = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.edit_motorcycle = new System.Windows.Forms.Button();
             this.buggy = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.type = new System.Windows.Forms.TextBox();
             this.add_motorcycle = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.edit_sailboard = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.sail_type = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.board_class = new System.Windows.Forms.TextBox();
             this.add_sailboard = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.edit_train = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.traction_type = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -64,7 +69,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.model = new System.Windows.Forms.TextBox();
             this.vehicle_list = new System.Windows.Forms.ListBox();
-            this.edit = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.remove = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -77,9 +81,9 @@
             // 
             // add_car
             // 
-            this.add_car.Location = new System.Drawing.Point(60, 71);
+            this.add_car.Location = new System.Drawing.Point(10, 70);
             this.add_car.Name = "add_car";
-            this.add_car.Size = new System.Drawing.Size(119, 23);
+            this.add_car.Size = new System.Drawing.Size(98, 23);
             this.add_car.TabIndex = 2;
             this.add_car.Text = "Add";
             this.add_car.UseVisualStyleBackColor = true;
@@ -87,6 +91,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.edit_car);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.design);
             this.groupBox1.Controls.Add(this.label2);
@@ -98,6 +103,16 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Car";
+            // 
+            // edit_car
+            // 
+            this.edit_car.Location = new System.Drawing.Point(119, 70);
+            this.edit_car.Name = "edit_car";
+            this.edit_car.Size = new System.Drawing.Size(100, 23);
+            this.edit_car.TabIndex = 7;
+            this.edit_car.Text = "Edit";
+            this.edit_car.UseVisualStyleBackColor = true;
+            this.edit_car.Click += new System.EventHandler(this.edit_car_Click);
             // 
             // label3
             // 
@@ -133,6 +148,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.edit_bicycle);
             this.groupBox2.Controls.Add(this.sport);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.wheel_count);
@@ -143,6 +159,16 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bicycle";
+            // 
+            // edit_bicycle
+            // 
+            this.edit_bicycle.Location = new System.Drawing.Point(119, 70);
+            this.edit_bicycle.Name = "edit_bicycle";
+            this.edit_bicycle.Size = new System.Drawing.Size(100, 23);
+            this.edit_bicycle.TabIndex = 8;
+            this.edit_bicycle.Text = "Edit";
+            this.edit_bicycle.UseVisualStyleBackColor = true;
+            this.edit_bicycle.Click += new System.EventHandler(this.edit_bicycle_Click);
             // 
             // sport
             // 
@@ -172,9 +198,9 @@
             // 
             // add_bicycle
             // 
-            this.add_bicycle.Location = new System.Drawing.Point(60, 71);
+            this.add_bicycle.Location = new System.Drawing.Point(6, 70);
             this.add_bicycle.Name = "add_bicycle";
-            this.add_bicycle.Size = new System.Drawing.Size(119, 23);
+            this.add_bicycle.Size = new System.Drawing.Size(103, 23);
             this.add_bicycle.TabIndex = 2;
             this.add_bicycle.Text = "Add";
             this.add_bicycle.UseVisualStyleBackColor = true;
@@ -182,6 +208,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.edit_motorcycle);
             this.groupBox3.Controls.Add(this.buggy);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.type);
@@ -192,6 +219,16 @@
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Motorcycle";
+            // 
+            // edit_motorcycle
+            // 
+            this.edit_motorcycle.Location = new System.Drawing.Point(116, 70);
+            this.edit_motorcycle.Name = "edit_motorcycle";
+            this.edit_motorcycle.Size = new System.Drawing.Size(103, 23);
+            this.edit_motorcycle.TabIndex = 8;
+            this.edit_motorcycle.Text = "Edit";
+            this.edit_motorcycle.UseVisualStyleBackColor = true;
+            this.edit_motorcycle.Click += new System.EventHandler(this.edit_motorcycle_Click);
             // 
             // buggy
             // 
@@ -221,9 +258,9 @@
             // 
             // add_motorcycle
             // 
-            this.add_motorcycle.Location = new System.Drawing.Point(60, 70);
+            this.add_motorcycle.Location = new System.Drawing.Point(10, 70);
             this.add_motorcycle.Name = "add_motorcycle";
-            this.add_motorcycle.Size = new System.Drawing.Size(119, 23);
+            this.add_motorcycle.Size = new System.Drawing.Size(99, 23);
             this.add_motorcycle.TabIndex = 2;
             this.add_motorcycle.Text = "Add";
             this.add_motorcycle.UseVisualStyleBackColor = true;
@@ -231,6 +268,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.edit_sailboard);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.sail_type);
             this.groupBox4.Controls.Add(this.label5);
@@ -242,6 +280,16 @@
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Sailboard";
+            // 
+            // edit_sailboard
+            // 
+            this.edit_sailboard.Location = new System.Drawing.Point(119, 70);
+            this.edit_sailboard.Name = "edit_sailboard";
+            this.edit_sailboard.Size = new System.Drawing.Size(100, 23);
+            this.edit_sailboard.TabIndex = 7;
+            this.edit_sailboard.Text = "Edit";
+            this.edit_sailboard.UseVisualStyleBackColor = true;
+            this.edit_sailboard.Click += new System.EventHandler(this.edit_sailboard_Click);
             // 
             // label6
             // 
@@ -277,9 +325,9 @@
             // 
             // add_sailboard
             // 
-            this.add_sailboard.Location = new System.Drawing.Point(60, 70);
+            this.add_sailboard.Location = new System.Drawing.Point(10, 70);
             this.add_sailboard.Name = "add_sailboard";
-            this.add_sailboard.Size = new System.Drawing.Size(119, 23);
+            this.add_sailboard.Size = new System.Drawing.Size(98, 23);
             this.add_sailboard.TabIndex = 2;
             this.add_sailboard.Text = "Add";
             this.add_sailboard.UseVisualStyleBackColor = true;
@@ -287,6 +335,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.edit_train);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.traction_type);
             this.groupBox5.Controls.Add(this.label8);
@@ -298,6 +347,16 @@
             this.groupBox5.TabIndex = 10;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Train";
+            // 
+            // edit_train
+            // 
+            this.edit_train.Location = new System.Drawing.Point(117, 70);
+            this.edit_train.Name = "edit_train";
+            this.edit_train.Size = new System.Drawing.Size(102, 23);
+            this.edit_train.TabIndex = 7;
+            this.edit_train.Text = "Edit";
+            this.edit_train.UseVisualStyleBackColor = true;
+            this.edit_train.Click += new System.EventHandler(this.edit_train_Click);
             // 
             // label7
             // 
@@ -333,9 +392,9 @@
             // 
             // add_train
             // 
-            this.add_train.Location = new System.Drawing.Point(60, 70);
+            this.add_train.Location = new System.Drawing.Point(6, 70);
             this.add_train.Name = "add_train";
-            this.add_train.Size = new System.Drawing.Size(119, 23);
+            this.add_train.Size = new System.Drawing.Size(102, 23);
             this.add_train.TabIndex = 2;
             this.add_train.Text = "Add";
             this.add_train.UseVisualStyleBackColor = true;
@@ -411,15 +470,7 @@
             this.vehicle_list.Name = "vehicle_list";
             this.vehicle_list.Size = new System.Drawing.Size(407, 108);
             this.vehicle_list.TabIndex = 12;
-            // 
-            // edit
-            // 
-            this.edit.Location = new System.Drawing.Point(425, 350);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(59, 25);
-            this.edit.TabIndex = 13;
-            this.edit.Text = "Edit";
-            this.edit.UseVisualStyleBackColor = true;
+            this.vehicle_list.SelectedIndexChanged += new System.EventHandler(this.on_index_selected);
             // 
             // label12
             // 
@@ -432,12 +483,13 @@
             // 
             // remove
             // 
-            this.remove.Location = new System.Drawing.Point(425, 381);
+            this.remove.Location = new System.Drawing.Point(425, 349);
             this.remove.Name = "remove";
             this.remove.Size = new System.Drawing.Size(59, 25);
             this.remove.TabIndex = 14;
             this.remove.Text = "Remove";
             this.remove.UseVisualStyleBackColor = true;
+            this.remove.Click += new System.EventHandler(this.remove_Click);
             // 
             // Form1
             // 
@@ -446,7 +498,6 @@
             this.ClientSize = new System.Drawing.Size(495, 476);
             this.Controls.Add(this.remove);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.edit);
             this.Controls.Add(this.vehicle_list);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -493,7 +544,6 @@
         public System.Windows.Forms.GroupBox groupBox4;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox board_class;
-        public System.Windows.Forms.Button add_sailboard;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox sail_type;
         public System.Windows.Forms.GroupBox groupBox5;
@@ -510,9 +560,14 @@
         public System.Windows.Forms.Label label11;
         public System.Windows.Forms.TextBox made_year;
         public System.Windows.Forms.ListBox vehicle_list;
-        public System.Windows.Forms.Button edit;
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.Button remove;
+        public System.Windows.Forms.Button edit_bicycle;
+        public System.Windows.Forms.Button edit_motorcycle;
+        public System.Windows.Forms.Button edit_car;
+        public System.Windows.Forms.Button edit_sailboard;
+        public System.Windows.Forms.Button add_sailboard;
+        public System.Windows.Forms.Button edit_train;
     }
 }
 

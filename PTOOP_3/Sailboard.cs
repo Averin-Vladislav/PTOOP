@@ -17,5 +17,13 @@ namespace PTOOP_3
             this.boardСlass = _boardClass;
             this.sailType = _sailType;
         }
+
+        public void Update(String model, String color, int madeYear, String _boardClass, String _sailType)
+        {
+            base.Update(model, color, madeYear);
+
+            this.boardСlass = _boardClass;
+            this.sailType = _sailType;
+        }
     }
 }

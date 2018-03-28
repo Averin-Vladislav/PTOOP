@@ -17,5 +17,13 @@ namespace PTOOP_3
             this.carryingСapacity = _carryingСapacity;
             this.design = _design;
         }
+
+        public void Update(String model, String color, int madeYear, int _carryingСapacity, String _design)
+        {
+            base.Update(model, color, madeYear);
+
+            this.carryingСapacity = _carryingСapacity;
+            this.design = _design;
+        }
     }
 }

@@ -20,5 +20,15 @@ namespace PTOOP_3
         {
             vehicleList.Add(vehicle);
         }
+
+        public Vehicle Get(int index)
+        {
+            return vehicleList[index];
+        }
+
+        public void Remove(int index)
+        {
+            this.vehicleList.RemoveAt(index);
+        }
     }
 }

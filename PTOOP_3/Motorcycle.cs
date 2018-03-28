@@ -17,5 +17,13 @@ namespace PTOOP_3
             this.type = _type;
             this.buggy = _buggy;
         }
+
+        public void Update(String model, String color, int madeYear, String _type, bool _buggy)
+        {
+            base.Update(model, color, madeYear);
+
+            this.type = _type;
+            this.buggy = _buggy;
+        }
     }
 }

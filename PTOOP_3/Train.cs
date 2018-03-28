@@ -17,5 +17,13 @@ namespace PTOOP_3
             this.carriageCount = _carriageCount;
             this.tractionType = _tractionType;
         }
+
+        public void Update(String model, String color, int madeYear, int _carriageCount, String _tractionType)
+        {
+            base.Update(model, color, madeYear);
+
+            this.carriageCount = _carriageCount;
+            this.tractionType = _tractionType;
+        }
     }
 }

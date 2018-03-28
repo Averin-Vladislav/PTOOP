@@ -17,5 +17,13 @@ namespace PTOOP_3
             this.wheelCount = _wheelCount;
             this.isSport = _isSport;
         }
+
+        public void Update(String model, String color, int madeYear, int _wheelCount, bool _isSport)
+        {
+            base.Update(model, color, madeYear);
+
+            this.wheelCount = _wheelCount;
+            this.isSport = _isSport;
+        }
     }
 }
