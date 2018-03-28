@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace PTOOP_3
 {
@@ -16,9 +18,11 @@ namespace PTOOP_3
         private VehicleList vehicleList;
         public static Form1 form;
         private int currentIndex;
+        private BinaryFormatter formatter;
 
         public Form1()
         {
+            formatter = new BinaryFormatter();
             Form1.form = this;
             this.vehicleListOfStrings = new List<String>();
             this.vehicleList = new VehicleList();
@@ -58,17 +62,19 @@ namespace PTOOP_3
             int madeYear = int.Parse(this.made_year.Text);
             int carryingCapacity = int.Parse(this.carrying_capacity.Text);
             String design = this.design.Text;
+            Car car;
 
             if (isNew)
             {
-                Car car = new Car(model, color, madeYear, carryingCapacity, design);
+                car = new Car(model, color, madeYear, carryingCapacity, design);
                 this.vehicleList.Add(car);
             } else
             {
-                ((Car)this.vehicleList.Get(index)).Update(model, color, madeYear, carryingCapacity, design);
+                car = ((Car)this.vehicleList.Get(index));
+                car.Update(model, color, madeYear, carryingCapacity, design);
                 this.vehicleListOfStrings.RemoveAt(this.currentIndex);
             }
-            this.vehicleListOfStrings.Insert(index, "Car: " + model + ", color: " + color + ", made year: " + madeYear + ", carrying capacity: " + carryingCapacity + ", design: " + design + ")");
+            this.vehicleListOfStrings.Insert(index, car.GetString());
             this.updateVehicleList();
         }
 
@@ -78,19 +84,21 @@ namespace PTOOP_3
             String color = this.color.Text;
             int madeYear = int.Parse(this.made_year.Text);
             int wheelCount = int.Parse(this.wheel_count.Text);
-            bool isSport = this.sport.Checked;  
+            bool isSport = this.sport.Checked;
+            Bicycle bicycle;
 
             if (isNew)
             {
-                Bicycle bicycle = new Bicycle(model, color, madeYear, wheelCount, isSport);
+                bicycle = new Bicycle(model, color, madeYear, wheelCount, isSport);
                 this.vehicleList.Add(bicycle);
             }
             else
             {
-                ((Bicycle)this.vehicleList.Get(index)).Update(model, color, madeYear, wheelCount, isSport);
+                bicycle = ((Bicycle)this.vehicleList.Get(index));
+                bicycle.Update(model, color, madeYear, wheelCount, isSport);
                 this.vehicleListOfStrings.RemoveAt(this.currentIndex);
             }
-            this.vehicleListOfStrings.Insert(index, "Bicycle(model: " + model + ", color: " + color + ", made year: " + madeYear + ", wheel count: " + wheelCount + ", is sport: " + isSport + ")");
+            this.vehicleListOfStrings.Insert(index, bicycle.GetString());
             this.updateVehicleList();
         }
 
@@ -101,18 +109,20 @@ namespace PTOOP_3
             int madeYear = int.Parse(this.made_year.Text);
             String type = this.type.Text;
             bool isBuggy = this.buggy.Checked;
+            Motorcycle motorcycle;
 
             if (isNew)
             {
-                Motorcycle motorcycle = new Motorcycle(model, color, madeYear, type, isBuggy);
+                motorcycle = new Motorcycle(model, color, madeYear, type, isBuggy);
                 this.vehicleList.Add(motorcycle);
             }
             else
             {
-                ((Motorcycle)this.vehicleList.Get(index)).Update(model, color, madeYear, type, isBuggy);
+                motorcycle = ((Motorcycle)this.vehicleList.Get(index));
+                motorcycle.Update(model, color, madeYear, type, isBuggy);
                 this.vehicleListOfStrings.RemoveAt(this.currentIndex);
             }
-            this.vehicleListOfStrings.Insert(index, "Motorcycle(model: " + model + ", color: " + color + ", made year: " + madeYear + ", type: " + type + ", is buggy: " + isBuggy + ")");
+            this.vehicleListOfStrings.Insert(index, motorcycle.GetString());
             this.updateVehicleList();
         }
 
@@ -123,18 +133,20 @@ namespace PTOOP_3
             int madeYear = int.Parse(this.made_year.Text);
             int carriageCount = int.Parse(this.carriage_count.Text);
             String tractionType = this.traction_type.Text;
+            Train train;
 
             if (isNew)
             {
-                Train train = new Train(model, color, madeYear, carriageCount, tractionType);
+                train = new Train(model, color, madeYear, carriageCount, tractionType);
                 this.vehicleList.Add(train);
             }
             else
             {
-                ((Train)this.vehicleList.Get(index)).Update(model, color, madeYear, carriageCount, tractionType);
+                train = ((Train)this.vehicleList.Get(index));
+                train.Update(model, color, madeYear, carriageCount, tractionType);
                 this.vehicleListOfStrings.RemoveAt(this.currentIndex);
             }
-            this.vehicleListOfStrings.Insert(index, "Train(model: " + model + ", color: " + color + ", made year: " + madeYear + ", carriage count: " + carriageCount + ", traction type: " + tractionType + ")");
+            this.vehicleListOfStrings.Insert(index, train.GetString());
             this.updateVehicleList();
         }
 
@@ -145,18 +157,20 @@ namespace PTOOP_3
             int madeYear = int.Parse(this.made_year.Text);
             String boardClass = this.board_class.Text;
             String sailType = this.sail_type.Text;
+            Sailboard sailboard;
 
             if (isNew)
             {
-                Sailboard sailboard = new Sailboard(model, color, madeYear, boardClass, sailType);
+                sailboard = new Sailboard(model, color, madeYear, boardClass, sailType);
                 this.vehicleList.Add(sailboard);
             }
             else
             {
-                ((Sailboard)this.vehicleList.Get(index)).Update(model, color, madeYear, boardClass, sailType);
+                sailboard = ((Sailboard)this.vehicleList.Get(index));
+                sailboard.Update(model, color, madeYear, boardClass, sailType);
                 this.vehicleListOfStrings.RemoveAt(this.currentIndex);
             }
-            this.vehicleListOfStrings.Insert(index, "Sailboard: " + model + ", color: " + color + ", made year: " + madeYear + ", board class: " + boardClass + ", sail type: " + sailType + ")");
+            this.vehicleListOfStrings.Insert(index, sailboard.GetString());
             this.updateVehicleList();
         }
 
@@ -201,6 +215,31 @@ namespace PTOOP_3
         private void edit_sailboard_Click(object sender, EventArgs e)
         {
             this.addSailboard(this.currentIndex, false);
+        }
+
+        private void serialize_Click(object sender, EventArgs e)
+        {
+            using (FileStream fs = new FileStream("pops.bin", FileMode.OpenOrCreate))
+            {
+                formatter.Serialize(fs, vehicleList);
+            }
+        }
+
+        private void deserialize_Click(object sender, EventArgs e)
+        {
+            vehicleList = null;
+
+            using (FileStream fs = new FileStream("pops.bin", FileMode.OpenOrCreate))
+            {
+                vehicleList = (VehicleList)formatter.Deserialize(fs);
+
+                for (int i = 0; i < vehicleList.Size(); i++)
+                {
+                    vehicleListOfStrings.Add(vehicleList.Get(i).GetString());
+                }
+            }
+
+            this.updateVehicleList();
         }
     }
 }

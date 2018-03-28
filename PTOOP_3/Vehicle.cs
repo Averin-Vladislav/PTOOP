@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PTOOP_3
 {
-    class Vehicle
+    [Serializable]
+    abstract class Vehicle
     {
         public String model;
         public String color;
@@ -25,5 +26,7 @@ namespace PTOOP_3
             this.color = _color;
             this.madeYear = _madeYear;
         }
+
+        public abstract String GetString();
     }
 }

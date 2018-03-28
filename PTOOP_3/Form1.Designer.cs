@@ -71,6 +71,8 @@
             this.vehicle_list = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
             this.remove = new System.Windows.Forms.Button();
+            this.serialize = new System.Windows.Forms.Button();
+            this.deserialize = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -468,7 +470,7 @@
             this.vehicle_list.FormattingEnabled = true;
             this.vehicle_list.Location = new System.Drawing.Point(12, 350);
             this.vehicle_list.Name = "vehicle_list";
-            this.vehicle_list.Size = new System.Drawing.Size(407, 108);
+            this.vehicle_list.Size = new System.Drawing.Size(399, 121);
             this.vehicle_list.TabIndex = 12;
             this.vehicle_list.SelectedIndexChanged += new System.EventHandler(this.on_index_selected);
             // 
@@ -483,19 +485,41 @@
             // 
             // remove
             // 
-            this.remove.Location = new System.Drawing.Point(425, 349);
+            this.remove.Location = new System.Drawing.Point(417, 350);
             this.remove.Name = "remove";
-            this.remove.Size = new System.Drawing.Size(59, 25);
+            this.remove.Size = new System.Drawing.Size(67, 38);
             this.remove.TabIndex = 14;
             this.remove.Text = "Remove";
             this.remove.UseVisualStyleBackColor = true;
             this.remove.Click += new System.EventHandler(this.remove_Click);
+            // 
+            // serialize
+            // 
+            this.serialize.Location = new System.Drawing.Point(417, 394);
+            this.serialize.Name = "serialize";
+            this.serialize.Size = new System.Drawing.Size(67, 35);
+            this.serialize.TabIndex = 15;
+            this.serialize.Text = "Serialize";
+            this.serialize.UseVisualStyleBackColor = true;
+            this.serialize.Click += new System.EventHandler(this.serialize_Click);
+            // 
+            // deserialize
+            // 
+            this.deserialize.Location = new System.Drawing.Point(417, 435);
+            this.deserialize.Name = "deserialize";
+            this.deserialize.Size = new System.Drawing.Size(67, 36);
+            this.deserialize.TabIndex = 16;
+            this.deserialize.Text = "Deserialize";
+            this.deserialize.UseVisualStyleBackColor = true;
+            this.deserialize.Click += new System.EventHandler(this.deserialize_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 476);
+            this.Controls.Add(this.deserialize);
+            this.Controls.Add(this.serialize);
             this.Controls.Add(this.remove);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.vehicle_list);
@@ -568,6 +592,8 @@
         public System.Windows.Forms.Button edit_sailboard;
         public System.Windows.Forms.Button add_sailboard;
         public System.Windows.Forms.Button edit_train;
+        public System.Windows.Forms.Button serialize;
+        public System.Windows.Forms.Button deserialize;
     }
 }
 

@@ -26,6 +26,11 @@ namespace PTOOP_3
             return vehicleList[index];
         }
 
+        public int Size()
+        {
+            return vehicleList.Count;
+        }
+
         public void Remove(int index)
         {
             this.vehicleList.RemoveAt(index);

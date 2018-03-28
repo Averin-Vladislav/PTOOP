@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTOOP_3
 {
+    [Serializable]
     class Bicycle : Vehicle
     {
         public int wheelCount;
@@ -24,6 +25,11 @@ namespace PTOOP_3
 
             this.wheelCount = _wheelCount;
             this.isSport = _isSport;
+        }
+
+        public override String GetString()
+        {
+            return "Bicycle(model: " + this.model + ", color: " + this.color + ", made year: " + this.madeYear + ", wheel count: " + this.wheelCount + ", is sport: " + this.isSport +")";
         }
     }
 }

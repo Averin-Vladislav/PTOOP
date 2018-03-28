@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTOOP_3
 {
+    [Serializable]
     class Motorcycle : Vehicle
     {
         String type;
@@ -24,6 +25,11 @@ namespace PTOOP_3
 
             this.type = _type;
             this.buggy = _buggy;
+        }
+
+        public override String GetString()
+        {
+            return "Motorcycle(model: " + this.model + ", color: " + this.color + ", made year: " + this.madeYear + ", type: " + this.type + ", is buggy: " + this.buggy + ")";
         }
     }
 }

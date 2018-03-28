@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTOOP_3
 {
+    [Serializable]
     class Sailboard : Vehicle
     {
         public String boardСlass;
@@ -24,6 +25,11 @@ namespace PTOOP_3
 
             this.boardСlass = _boardClass;
             this.sailType = _sailType;
+        }
+
+        public override String GetString()
+        {
+            return "Sailboard: " + this.model + ", color: " + this.color + ", made year: " + this.madeYear + ", board class: " + this.boardСlass + ", sail type: " + this.sailType + ")";
         }
     }
 }
