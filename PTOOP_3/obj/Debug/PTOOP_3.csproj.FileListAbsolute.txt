@@ -1,1 +1,3 @@
 D:\PTOOP_3\PTOOP_3\bin\Debug\PTOOP_3.exe.config
+D:\PTOOP_3\PTOOP_3\obj\Debug\PTOOP_3.exe
+D:\PTOOP_3\PTOOP_3\obj\Debug\PTOOP_3.pdb
