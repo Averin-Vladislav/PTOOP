@@ -1,0 +1,5 @@
+D:\PTOOP\PTOOP_3\bin\Debug\Ship.dll
+D:\PTOOP\PTOOP_3\bin\Debug\Ship.pdb
+D:\PTOOP\Ship\obj\Debug\Ship.dll
+D:\PTOOP\Ship\obj\Debug\Ship.pdb
+D:\PTOOP\Ship\obj\Debug\Ship.csprojResolveAssemblyReference.cache

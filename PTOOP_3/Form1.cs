@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using LibraryInterface;
+using System.Reflection;
+using VehicleLibrary;
 
 namespace PTOOP_3
 {
@@ -22,12 +25,28 @@ namespace PTOOP_3
 
         public Form1()
         {
+            this.LoadLibrary();
             formatter = new BinaryFormatter();
             Form1.form = this;
             this.vehicleListOfStrings = new List<String>();
             this.vehicleList = new VehicleList();
             InitializeComponent();
             this.vehicle_list.DataSource = this.vehicleListOfStrings;
+        }
+
+        private void LoadLibrary()
+        {
+            String path = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "Ship.dll");
+            Assembly assembly = Assembly.LoadFrom(path);
+
+            foreach(Type t in assembly.GetExportedTypes())
+            {
+                if (t.IsClass && typeof(LibraryInterface.LibraryInterface).IsAssignableFrom(t))
+                {
+                    LibraryInterface.LibraryInterface shipClass = (LibraryInterface.LibraryInterface)Activator.CreateInstance(t);
+                    Vehicle vehicle = shipClass.GetObject();
+                }
+            }
         }
 
         private void add_bicycle_Click(object sender, EventArgs e)

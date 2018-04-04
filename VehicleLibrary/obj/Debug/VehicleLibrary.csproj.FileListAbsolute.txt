@@ -1,0 +1,5 @@
+D:\PTOOP\PTOOP_3\bin\Debug\VehicleLibrary.dll
+D:\PTOOP\PTOOP_3\bin\Debug\VehicleLibrary.pdb
+D:\PTOOP\VehicleLibrary\obj\Debug\VehicleLibrary.dll
+D:\PTOOP\VehicleLibrary\obj\Debug\VehicleLibrary.pdb
+D:\PTOOP\VehicleLibrary\obj\Debug\VehicleLibrary.csprojResolveAssemblyReference.cache

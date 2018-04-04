@@ -1,0 +1,5 @@
+D:\PTOOP\PTOOP_3\bin\Debug\LibraryInterface.dll
+D:\PTOOP\PTOOP_3\bin\Debug\LibraryInterface.pdb
+D:\PTOOP\LibraryInterface\obj\Debug\LibraryInterface.dll
+D:\PTOOP\LibraryInterface\obj\Debug\LibraryInterface.pdb
+D:\PTOOP\LibraryInterface\obj\Debug\LibraryInterface.csprojResolveAssemblyReference.cache
